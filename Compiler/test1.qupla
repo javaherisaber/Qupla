@@ -1,0 +1,11 @@
+~This is a sample Written in QUPLA $
+@The program compute fibonacci serie~ 
+ITeM:integer 
+F(x:integer,s:bool,x:real):x>0?f(x-1)+f(x-2):1 
+b <- 20 
+i:integer
+x:real
+#f(i,x) ~Prinf result
+~
+itEm:bool
+#s()
