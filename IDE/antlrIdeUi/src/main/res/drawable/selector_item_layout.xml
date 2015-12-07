@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:enterFadeDuration="150"
+    android:exitFadeDuration="150">
+    <!-- Color when the row is selected -->
+    <item android:drawable="@drawable/color_gray_light" android:state_pressed="true"/>
+    <!-- Standard background color -->
+    <item android:drawable="@android:color/white" android:state_pressed="false"/>
+</selector>

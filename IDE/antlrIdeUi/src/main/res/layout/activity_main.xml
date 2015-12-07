@@ -1,0 +1,98 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true" xmlns:app1="http://schemas.android.com/apk/res/com.dahanservice.antlrideui">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinator"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+       
+		 <android.support.design.widget.AppBarLayout
+			    android:id="@+id/app_bar"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+	            android:fitsSystemWindows="true"
+	            android:theme="@style/ThemeOverlay.AppCompat.Dark">
+	            <android.support.v7.widget.Toolbar
+	                android:id="@+id/toolbar"
+	                android:layout_width="match_parent"
+	                app:layout_scrollFlags="scroll|enterAlways"
+	                android:layout_height="?attr/actionBarSize"
+	                android:background="?attr/colorPrimary"
+	                app:popupTheme="@style/MyDarkToolbarStyle"
+	                android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+	            
+	            
+	            <EditText 
+	                android:id="@+id/edtCodeText"
+	               android:layout_width="match_parent"
+	               android:layout_height="250dp" 
+	               android:background="@android:color/transparent"
+	               android:gravity="top|left"
+	               android:layout_margin="18dp"
+	               android:textSize="20sp"
+	               android:hint="@string/type_code_here"/>
+
+	            
+	        </android.support.design.widget.AppBarLayout>
+	        
+
+			<FrameLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:background="#dadada"
+			    android:paddingBottom="300dp"
+			    app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+	           
+			    <android.support.v7.widget.RecyclerView
+			        android:id="@+id/errorRecyclerView"
+			        android:layout_width="fill_parent"
+			        android:layout_height="match_parent"
+			        android:choiceMode="singleChoice"
+			        android:scrollbars="vertical" />
+	           <View
+			        android:layout_width="match_parent"
+			        android:layout_height="8dp"
+			        android:layout_gravity="top"
+			        android:background="@drawable/app_bar_shadow" /> 	
+			        
+	           
+	           <ImageView 
+	               android:id="@+id/imgLaugh"
+	               android:visibility="invisible"
+	               android:contentDescription="@string/smiley_laugh"
+	               android:layout_width="fill_parent"
+			       android:layout_height="match_parent"
+			       android:padding="40dp"
+			       android:src="@drawable/img_laugh"/>
+	           
+	           
+	           		
+			</FrameLayout>
+
+         <android.support.design.widget.FloatingActionButton
+             android:id="@+id/fab"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentBottom="true"
+             android:src="@drawable/run_icon"
+             app1:backgroundTint="#ff4081"
+             app:layout_anchor="@id/app_bar"
+        	 app:layout_anchorGravity="bottom|end"
+             app:fabSize="normal" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/drawer_header"
+        app:menu="@menu/toolbar_menu"/>
+</android.support.v4.widget.DrawerLayout>
